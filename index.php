@@ -18,14 +18,22 @@
 </head>
 
 <body>
-    test
+    
 </body>
 
 </html>
 
 <?php
 require_once "./classes/Product.php";
+require_once "./classes/Cat.php";
+require_once "./classes/Dog.php";
 
-$prodottoa = new Product('25.00€', '6x6x8 cm', 'stoffa 90% lana 10%', '4.1');
-var_dump($prodottoa);
+$giacca = new Product('Giacca','','25', '6x6x8 cm', 'Stoffa 90% lana 10%', 4.1,'');
+var_dump($giacca);
+
+$catfood = new Cat('Felix','','8.50', '32x16x10','Organico/Pesce', 3.7,'');
+var_dump($catfood);
+
+$dogfood = new Dog('Zooclass','','6', '40x20x12','Organico/Carne', 3.4,'');
+var_dump($dogfood);
 ?>
