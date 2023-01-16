@@ -1,35 +1,49 @@
 <?php
-$elencoAuto = [
+$elencoProdotti = [
   [
-    "prezzo" => "Audi",
-    "dimensioni" => "A2",
-    "materiali" => "Lana",
-    "valutazione" => 4.2,
-    "scontato" => false
-  ], [
-    "prezzo" => "Audi",
-    "dimensioni" => "A2",
-    "materiali" => "Gomma",
-    "valutazione" => 2.6,
-    "scontato" => true
-  ], [
-    "prezzo" => "Audi",
-    "dimensioni" => "A2",
-    "materiali" => "Metallo",
-    "valutazione" => 3,
-    "scontato" => false
-  ], [
-    "prezzo" => "Audi",
-    "dimensioni" => "A2",
-    "materiali" => "Organico",
+    "nome" => "Felix",
+    "categoria" => "Prodotto per gatti",
+    "prezzo" => "8.50",
+    "dimensioni" => "32x16x10",
+    "materiali" => "Organico/Pesce",
     "valutazione" => 3.7,
-    "scontato" => false
+    "specie" => "Gatto",
+    "scontato" => '20'
   ], [
-    "prezzo" => "Audi",
-    "dimensioni" => "A2",
-    "materiali" => "Altro",
-    "valutazione" => 2.3,
-    "scontato" => true
+    "nome" => "Zooclass",
+    "categoria" => "Prodotto per cani",
+    "prezzo" => "6",
+    "dimensioni" => "40x20x12",
+    "materiali" => "Organico/Carne",
+    "valutazione" => 3.4,
+    "specie" => "Cane",
+    "scontato" => ''
+  ],  [
+    "nome" => "Giacca",
+    "categoria" => "",
+    "prezzo" => "25",
+    "dimensioni" => "32x16x10",
+    "materiali" => "Stoffa/Lana",
+    "valutazione" => 4.1,
+    "specie" => "",
+    "scontato" => ''
   ]
+  // [
+  //   "categoria" => "Prodotto per gatti"
+  //   "prezzo" => "8.50",
+  //   "dimensioni" => "32x16x10",
+  //   "materiali" => "Organico/Pesce",
+  //   "valutazione" => 3.7,
+  //   "specie" => "Gatto"
+  //   "scontato" => false
+  // ],  [
+  //   "categoria" => "Prodotto per gatti"
+  //   "prezzo" => "8.50",
+  //   "dimensioni" => "32x16x10",
+  //   "materiali" => "Organico/Pesce",
+  //   "valutazione" => 3.7,
+  //   "specie" => "Gatto"
+  //   "scontato" => false
+  // ],
 ];
 ?>

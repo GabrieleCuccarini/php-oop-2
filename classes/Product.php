@@ -13,8 +13,9 @@ class Product {
     protected string $materiali;
     protected string $valutazione;
     protected string $specie;
+    protected $scontato;
 
-    function __construct($_nome, $_categoria, $_prezzo, $_dimensioni, $_materiali, $_valutazione, $_specie) {
+    function __construct($_nome, $_categoria, $_prezzo, $_dimensioni, $_materiali, $_valutazione, $_specie, $_scontato) {
     $this->setNome($_nome);   
     $this->setCategoria($_categoria);   
     $this->setPrezzo($_prezzo);
@@ -22,6 +23,7 @@ class Product {
     $this->setMateriali($_materiali);
     $this->setValutazione($_valutazione);
     $this->setSpecie($_specie);
+    $this->setScontato($_scontato);
     }
 
     public function getNome()
@@ -43,7 +45,6 @@ class Product {
     public function setCategoria($_categoria)
     {
         $this->categoria = $_categoria;
-
         return $this;
     }
 
@@ -90,7 +91,6 @@ class Product {
     public function setValutazione($_valutazione)
     {
         $this->valutazione = number_format($_valutazione, 1);
-
         return $this;
     }
 
@@ -102,6 +102,17 @@ class Product {
     public function setSpecie($_specie)
     {
         $this->specie = $_specie;
+        return $this;
+    }
+
+    public function getScontato()
+    {
+        return $this->scontato ? ($this->scontato . "% di sconto") : 'Intero';
+    }
+
+    public function setScontato($_scontato)
+    {
+        $this->scontato = $_scontato;
         return $this;
     }
 }
