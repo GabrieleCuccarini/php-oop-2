@@ -1,3 +1,7 @@
 .base30 {
     flex-basis: 30%;
 }
+
+i {
+    font-size: 25px;
+}

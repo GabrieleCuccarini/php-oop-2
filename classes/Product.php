@@ -7,7 +7,7 @@ STRUTTURA
 <?php
 class Product {
     protected string $nome;
-    protected string $categoria;
+    protected $magazzino;
     protected string $prezzo;
     protected string $dimensioni;
     protected string $materiali;
@@ -15,9 +15,9 @@ class Product {
     protected string $specie;
     protected $scontato;
 
-    function __construct($_nome, $_categoria, $_prezzo, $_dimensioni, $_materiali, $_valutazione, $_specie, $_scontato) {
+    function __construct($_nome, $_magazzino, $_prezzo, $_dimensioni, $_materiali, $_valutazione, $_specie, $_scontato) {
     $this->setNome($_nome);   
-    $this->setCategoria($_categoria);   
+    $this->setMagazzino($_magazzino);  
     $this->setPrezzo($_prezzo);
     $this->setDimensioni($_dimensioni);
     $this->setMateriali($_materiali);
@@ -37,14 +37,14 @@ class Product {
         return $this;
     }
 
-    public function getCategoria()
+    public function getMagazzino()
     {
-        return $this->categoria;
+        return $this->magazzino;
     }
 
-    public function setCategoria($_categoria)
+    public function setMagazzino($_magazzino)
     {
-        $this->categoria = $_categoria;
+        $this->magazzino = $_magazzino;
         return $this;
     }
 
@@ -96,7 +96,13 @@ class Product {
 
     public function getSpecie()
     {
-        return $this->specie;
+        if ($this->specie === "Cani") {
+            return "fa-dog";
+        } else if ($this->specie === "Gatti") {
+            return "fa-cat";
+        } else {
+            return "fa-border-all";
+        }
     }
 
     public function setSpecie($_specie)
@@ -107,7 +113,13 @@ class Product {
 
     public function getScontato()
     {
-        return $this->scontato ? ($this->scontato . "% di sconto") : 'Intero';
+        if ($this->scontato === 15) {
+            return (($this->prezzo) * 85 / 100). "€ (15%)";
+        } else if ($this->scontato === 30) {
+            return (($this->scontato) * 70 / 100)."€ (30%)";
+        } else {
+            return "No";
+        }
     }
 
     public function setScontato($_scontato)
