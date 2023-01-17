@@ -14,7 +14,7 @@ $animalProducts = array_map(function ($product) {
     if ($product["specie"] === "Gatto") {
       $toReturn = new Cat($product["nome"], $product["magazzino"], $product["prezzo"],$product["dimensioni"],$product["materiali"],$product["valutazione"],$product["specie"],$product["scontato"]);
     } else if ($product["specie"] === "Cane") {
-        $toReturn = new Dog($product["nome"], $product["magazzino"], $product["prezzo"],$product["dimensioni"],$product["materiali"],$product["valutazione"],$product["specie"],$product["scontato"]);
+      $toReturn = new Dog($product["nome"], $product["magazzino"], $product["prezzo"],$product["dimensioni"],$product["materiali"],$product["valutazione"],$product["specie"],$product["scontato"]);
     } else {
       $toReturn = new Product($product["nome"], $product["magazzino"], $product["prezzo"],$product["dimensioni"],$product["materiali"],$product["valutazione"],$product["specie"],$product["scontato"]);
     }

@@ -114,9 +114,9 @@ class Product {
     public function getScontato()
     {
         if ($this->scontato === 15) {
-            return (($this->prezzo) * 85 / 100). "€ (15%)";
+            return number_format(($this->prezzo) * 85 / 100, 2) . "€ (15%)";
         } else if ($this->scontato === 30) {
-            return (($this->scontato) * 70 / 100)."€ (30%)";
+            return number_format(($this->scontato) * 70 / 100, 2)."€ (30%)";
         } else {
             return "No";
         }
