@@ -14,12 +14,12 @@ $genericCategory = new Category("Generico", '<i class="fa-solid fa-globe"></i>')
 $costruzioni = new Product("Palla", 23, $gameCategory, './imgs/palla.jpg', 22.40, 4.2, 15);
 $spazzola = new Product("Spazzola", 35, $cleanCategory, './imgs/spazzola.jpg', 12.70, 3.1, 0);
 $filettomerluzzo = new Cat("Filetto di merluzzo", 20, $foodCategory, './imgs/filetto.jpg', 14.20, 3.1, 30, 'Gatto');
-$cuccia = new Dog("Cuccia per cani", 22, $genericCategory, './imgs/cucciacani.jpg', 40.90, 4.2, 15,'Cane');
+$cuccia = new Dog("Cuccia per cani", 22, $genericCategory, './imgs/cucciacani.jpg', 40.90, 4.2, 15,'Cane','Legno');
 $gomitolo = new Cat("Gomitolo di lana", 50, $gameCategory, './imgs/gomitolo.jpg', 3.60, 3.3, 0, 'Gatto');
 $crocchette = new Product("Crocchette nutrienti", 30, $foodCategory, './imgs/crocchette.png', 6.50, 2.4, 30);
 $tiragraffi = new Cat("Tiragraffi per gatti", 16, $gameCategory, './imgs/tiragraffi.jpg', 25.00, 1.9, 15,'Gatto');
-$sprayantipulci = new Dog("Spray antipulci", 48, $cleanCategory, './imgs/spray.jpg', 6.50, 4.8, 0,'Cane','Non tossico per uomini');
-$collare = new Dog("Collare per cani", 13, $genericCategory, './imgs/collare.png', 15.70, 3.8, 30,'Cane');
+$sprayantipulci = new Dog("Spray antipulci", 48, $cleanCategory, './imgs/spray.jpg', 6.50, 4.8, 0,'Cane','Soluzione antiparassiti');
+$collare = new Dog("Collare per cani", 13, $genericCategory, './imgs/collare.png', 15.70, 3.8, 30,'Cane','Pelle');
 
 //var_dump($cleanCategory->getIcona());
 
@@ -67,6 +67,11 @@ $animalProducts = [
                 <?php if (method_exists($product, "getSpecie")) { ?>
                 <div>Prodotto per: <?php echo ($product->getSpecie()) ?></div>
                 <?php } ?>
+
+                <?php if (method_exists($product, "getMateriali")) { ?>
+                <div>Materiali: <?php echo ($product->getMateriali()) ?></div>
+                <?php } ?>
+
                 <h3>Quantità in stock: <?php
                 echo $product->getMagazzino();
                 ?> </h4> <h4>Prezzo: €<?php

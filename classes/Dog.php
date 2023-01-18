@@ -4,13 +4,13 @@ require_once __DIR__ . "/Category.php";
 
 class Dog extends Product {
   protected string $specie;
-  protected $spray;
+  protected string $materiali;
 
-  function __construct($_nome, $_magazzino, Category $_categoria, $_immagine, $_prezzo, $_valutazione, $_scontato, $_specie, $_spray = null) {
+  function __construct($_nome, $_magazzino, Category $_categoria, $_immagine, $_prezzo, $_valutazione, $_scontato, $_specie, $_materiali = null) {
     parent::__construct($_nome, $_magazzino, $_categoria, $_immagine, $_prezzo, $_valutazione, $_scontato);
 
     $this->setSpecie($_specie);
-    $this->setSpray($_spray);
+    $this->setmateriali($_materiali);
   }
 
   public function getSpecie()
@@ -28,14 +28,14 @@ class Dog extends Product {
     return $this;
   }
 
-  public function getSpray()
+  public function getmateriali()
   {
-    return $this->spray;
+    return $this->materiali;
   }
 
-  public function setSpray($_spray)
+  public function setmateriali($_materiali)
   {
-    $this->spray = $_spray;
+    $this->materiali = $_materiali;
     return $this;
   }
 }
