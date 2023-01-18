@@ -11,15 +11,15 @@ $foodCategory = new Category("Cibo", '<i class="fa-solid fa-utensils"></i>');
 $genericCategory = new Category("Generico", '<i class="fa-solid fa-globe"></i>');
 
 //PRODOTTI
-$costruzioni = new Product("Palla", 23, $gameCategory, 22.40, 4.2, 15);
-$spazzola = new Product("Spazzola", 35, $cleanCategory, 12.70, 3.1, 0);
-$filettomerluzzo = new Cat("Filetto di merluzzo", 20, $foodCategory, 14.20, 3.1, 30, 'Gatto');
-$cuccia = new Dog("Cuccia per cani", 22, $genericCategory, 40.90, 4.2, 15,'Cane');
-$gomitolo = new Cat("Gomitolo di lana", 50, $gameCategory, 3.60, 3.3, 0, 'Gatto');
-$crocchette = new Product("Crocchette nutrienti", 30, $foodCategory, 6.50, 2.4, 30);
-$tiragraffi = new Cat("Tiragraffi per gatti", 16, $gameCategory, 25.00, 1.9, 15,'Gatto');
-$sprayantipulci = new Dog("Spray antipulci", 48, $cleanCategory, 6.50, 4.8, 0,'Cane','Non tossico per uomini');
-$collare = new Dog("Collare per cani", 13, $genericCategory, 15.70, 3.8, 30,'Cane');
+$costruzioni = new Product("Palla", 23, $gameCategory, './imgs/palla.jpg', 22.40, 4.2, 15);
+$spazzola = new Product("Spazzola", 35, $cleanCategory, './imgs/spazzola.jpg', 12.70, 3.1, 0);
+$filettomerluzzo = new Cat("Filetto di merluzzo", 20, $foodCategory, './imgs/filetto.jpg', 14.20, 3.1, 30, 'Gatto');
+$cuccia = new Dog("Cuccia per cani", 22, $genericCategory, './imgs/cucciacani.jpg', 40.90, 4.2, 15,'Cane');
+$gomitolo = new Cat("Gomitolo di lana", 50, $gameCategory, './imgs/gomitolo.jpg', 3.60, 3.3, 0, 'Gatto');
+$crocchette = new Product("Crocchette nutrienti", 30, $foodCategory, './imgs/crocchette.png', 6.50, 2.4, 30);
+$tiragraffi = new Cat("Tiragraffi per gatti", 16, $gameCategory, './imgs/tiragraffi.jpg', 25.00, 1.9, 15,'Gatto');
+$sprayantipulci = new Dog("Spray antipulci", 48, $cleanCategory, './imgs/spray.jpg', 6.50, 4.8, 0,'Cane','Non tossico per uomini');
+$collare = new Dog("Collare per cani", 13, $genericCategory, './imgs/collare.png', 15.70, 3.8, 30,'Cane');
 
 //var_dump($cleanCategory->getIcona());
 
@@ -58,15 +58,15 @@ $animalProducts = [
             <div class="d-flex justify-content-between align-items-center">
                 <h2 class="mx-5"><?php echo $product->getNome();?></h2>
                 <h2 class="mx-5"><?php echo $product->getCategoria()->getIcona();?></h2>
-            </div>
+            </div>        
+        <img src=" <?php echo $product->getImmagine();?>
+        " class="px150 card-img-top">
             <div class="card-text">
                 <h3>Tipo di prodotto: <?php
                 echo $product->getCategoria()->getTipologia();?>
-
                 <?php if (method_exists($product, "getSpecie")) { ?>
-                <div>Da usare per: <?php echo ($product->getSpecie()) ?></div>
+                <div>Prodotto per: <?php echo ($product->getSpecie()) ?></div>
                 <?php } ?>
-
                 <h3>Quantità in stock: <?php
                 echo $product->getMagazzino();
                 ?> </h4> <h4>Prezzo: €<?php

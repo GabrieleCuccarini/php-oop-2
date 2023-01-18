@@ -5,3 +5,8 @@
 i {
     font-size: 25px;
 }
+
+.px150 {
+    margin-left: 50px;
+    width: 150px;
+}

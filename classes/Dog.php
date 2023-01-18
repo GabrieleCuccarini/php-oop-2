@@ -6,8 +6,8 @@ class Dog extends Product {
   protected string $specie;
   protected $spray;
 
-  function __construct($_nome, $_magazzino, Category $_categoria, $_prezzo, $_valutazione, $_scontato, $_specie, $_spray = null) {
-    parent::__construct($_nome, $_magazzino, $_categoria, $_prezzo, $_valutazione, $_scontato);
+  function __construct($_nome, $_magazzino, Category $_categoria, $_immagine, $_prezzo, $_valutazione, $_scontato, $_specie, $_spray = null) {
+    parent::__construct($_nome, $_magazzino, $_categoria, $_immagine, $_prezzo, $_valutazione, $_scontato);
 
     $this->setSpecie($_specie);
     $this->setSpray($_spray);

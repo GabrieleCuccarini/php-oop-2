@@ -11,14 +11,16 @@ class Product {
     protected string $nome;
     protected int $magazzino;
     protected $categoria;
+    protected $immagine;
     protected float $prezzo;
     protected float $valutazione;
     protected $scontato;
 
-    function __construct($_nome, $_magazzino, Category $_categoria, $_prezzo, $_valutazione, $_scontato) {
+    function __construct($_nome, $_magazzino, Category $_categoria,$_immagine, $_prezzo, $_valutazione, $_scontato) {
     $this->setNome($_nome);   
     $this->setMagazzino($_magazzino);  
-    $this->setCategoria($_categoria);  
+    $this->setCategoria($_categoria); 
+    $this->setImmagine($_immagine); 
     $this->setPrezzo($_prezzo);
     $this->setValutazione($_valutazione);
     $this->setScontato($_scontato);
@@ -98,5 +100,15 @@ class Product {
     }
 
 
+    public function getImmagine()
+    {
+        return $this->immagine;
+    }
+
+    public function setImmagine($_immagine)
+    {
+        $this->immagine = $_immagine;
+        return $this;
+    }
 }
 ?>
